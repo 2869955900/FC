@@ -24,7 +24,7 @@ st.sidebar.header("Input Sample Data")  # 侧边栏输入样本数据
 ntprobnp = st.sidebar.number_input("NtproBNP:", min_value=0, max_value=10000, value=507)  # NtproBNP输入框
 
 # BMI input
-bmi = st.sidebar.number_input("BMI:", , min_value=10.0, max_value=60.0, value=31.22, step=0.01)  # BMI输入框
+bmi = st.sidebar.number_input("BMI:",  min_value=10.0, max_value=60.0, value=31.22, step=0.01)  # BMI输入框
 
 # LeftAtrialDiam input
 leftatrialdiam = st.sidebar.number_input("Left Atrial Diameter (LeftAtrialDiam):", min_value=0, max_value=100, value=5.5, step=0.1)  # 左房直径输入框
