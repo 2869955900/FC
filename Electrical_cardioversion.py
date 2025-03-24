@@ -21,13 +21,13 @@ st.title("Electrical Cardioversion Predictor")  # 电复律预测器
 st.sidebar.header("Input Sample Data")  # 侧边栏输入样本数据
 
 # NtproBNP input
-ntprobnp = st.sidebar.number_input("NtproBNP:", min_value=0, max_value=10000, value=1000)  # NtproBNP输入框
+ntprobnp = st.sidebar.number_input("NtproBNP:", min_value=0, max_value=10000, value=507)  # NtproBNP输入框
 
 # BMI input
-bmi = st.sidebar.number_input("BMI:", min_value=10, max_value=60, value=25)  # BMI输入框
+bmi = st.sidebar.number_input("BMI:", , min_value=10.0, max_value=60.0, value=31.22, step=0.01)  # BMI输入框
 
 # LeftAtrialDiam input
-leftatrialdiam = st.sidebar.number_input("Left Atrial Diameter (LeftAtrialDiam):", min_value=0, max_value=100, value=40)  # 左房直径输入框
+leftatrialdiam = st.sidebar.number_input("Left Atrial Diameter (LeftAtrialDiam):", min_value=0, max_value=100, value=5.5, step=0.1)  # 左房直径输入框
 
 # AFCourse input
 afcourse = st.sidebar.number_input("Atrial Fibrillation Course (AFCourse):", min_value=0, max_value=10, value=3)  # 心房颤动病程输入框
@@ -36,13 +36,13 @@ afcourse = st.sidebar.number_input("Atrial Fibrillation Course (AFCourse):", min
 af_type = st.sidebar.selectbox("Atrial Fibrillation Type:", options=list(af_type_options.keys()), format_func=lambda x: af_type_options[x])  # 心房颤动类型选择框
 
 # Systolic BP input
-systolicbp = st.sidebar.number_input("Systolic Blood Pressure (SystolicBP):", min_value=50, max_value=200, value=120)  # 收缩压输入框
+systolicbp = st.sidebar.number_input("Systolic Blood Pressure (SystolicBP):", min_value=50, max_value=200, value=119)  # 收缩压输入框
 
 # Age input
-age = st.sidebar.number_input("Age:", min_value=1, max_value=120, value=50)  # 年龄输入框
+age = st.sidebar.number_input("Age:", min_value=1, max_value=120, value=65)  # 年龄输入框
 
 # AST input
-ast = st.sidebar.number_input("AST:", min_value=0, max_value=200, value=25)  # AST输入框
+ast = st.sidebar.number_input("AST:", min_value=0, max_value=200, value=18)  # AST输入框
 
 # Process the input and make a prediction
 feature_values = [ntprobnp, bmi, leftatrialdiam, afcourse, af_type, systolicbp, age, ast]  # 收集所有输入的特征
